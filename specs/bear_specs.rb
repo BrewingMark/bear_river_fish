@@ -2,6 +2,7 @@ require("minitest/autorun")
 require("minitest/reporters")
 
 require_relative("../bear.rb")
+require_relative("../fish.rb")
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
@@ -17,6 +18,10 @@ class TestBear < MiniTest::Test
 
   def test_bear_has_type()
     assert_equal("grizzly", @bear.type)
+  end
+
+  def test_stomach_empty()
+    assert_equal(0, @bear.how_full())
   end
 
 
