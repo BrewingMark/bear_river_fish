@@ -30,5 +30,9 @@ class TestBear < MiniTest::Test
     assert_equal(1, @bear.how_full())
   end
 
+  def test_roar()
+    assert_equal("Rooooaaar!", @bear.roar())
+  end
+
 
 end
