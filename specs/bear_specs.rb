@@ -10,6 +10,7 @@ class TestBear < MiniTest::Test
 
   def setup()
     @bear = Bear.new("Gary", "grizzly")
+    @fish = Fish.new("Scott")
   end
 
   def test_bear_has_name()
@@ -22,6 +23,11 @@ class TestBear < MiniTest::Test
 
   def test_stomach_empty()
     assert_equal(0, @bear.how_full())
+  end
+
+  def test_eats_a_fish()
+    @bear.eats_a_fish(@fish)
+    assert_equal(1, @bear.how_full())
   end
 
 

@@ -12,5 +12,9 @@ class Bear
     @stomach.length
   end
 
+  def eats_a_fish(fish)
+    @stomach.push(fish)
+  end
+
 
 end
